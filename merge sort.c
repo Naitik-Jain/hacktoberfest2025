@@ -68,8 +68,14 @@ void printArray(int arr[], int n) {
 
 // Main function
 int main() {
-    int arr[] = {3,20, 80, 9, 2, 55, 77};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
 
     printf("Original array: ");
     printArray(arr, n);
